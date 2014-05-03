@@ -1,0 +1,262 @@
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#editor-holder #not-editor {
+    background-color: #2b313b !important;
+}
+
+/*Right toolbar - live preview, extensions*/
+#main-toolbar{
+  background-color: #232830;
+}
+
+/*Sidebar*/
+
+/*General sidebar style*/
+#sidebar{
+  background-color: #232830;
+  color: #65737f;
+}
+
+/*"Working files" header*/
+#sidebar #working-set-header{
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 700;
+  background-color: #232830;
+  color: #b5b5b5;
+}
+
+/*Working files style*/
+#sidebar #open-files-container{
+  background-color: #232830;
+}
+
+/*all working files*/
+#sidebar #open-files-container a{
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 500;
+  color: #b5b5b5;
+}
+/*all working files extensions*/
+#sidebar #open-files-container a span.extension{
+  color: #65737f;
+}
+
+/* Selected working file border top & bottom */
+#sidebar #open-files-container .sidebar-selection {
+  border-top: none;
+  border-bottom: none;
+}
+
+/*Selected working file background */
+#sidebar #open-files-container ul li.selected {
+  background-color: #2b313b;
+}
+
+/*Selected working file*/
+#sidebar #open-files-container ul li.selected a{
+  color: #b5b5b5;
+}
+
+/*Selected working file's extension*/
+/* changes with "all working files" if set */
+/*#sidebar #open-files-container ul li.selected a span.extension{
+  color: #65737f;
+}*/
+
+/* Triangle made up of two parts: []> */
+
+/*Selected working file's right triangle ([] block)*/
+#sidebar #open-files-container .sidebar-selection-triangle {
+  background-color: #2b313b;
+  border-bottom: none;
+}
+/*Selected working file's right triangle (> block)*/
+#sidebar #open-files-container .sidebar-selection-triangle.triangle-visible:before {
+  border-left: 12px solid #232830;
+}
+
+/*Icon next to a file, dot, X etc.*/
+#sidebar #open-files-container ul li .file-status-icon{
+  color: #65737f;
+}
+
+/*Project file header*/
+
+/* Project open button */
+#sidebar #project-files-header .btn-alt-quiet:active {
+  background: transparent;
+}
+
+/*Browser header, path select, search, X etc.*/
+#sidebar #project-files-header{
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 700;
+  background-color: #2b313b;
+  color: #b5b5b5;
+/*  border-bottom: 1px solid rgba(101, 115, 127, 0.1);*/
+  border-top: 1px solid rgba(101, 115, 127, 0.1);
+}
+
+#sidebar #project-files-header #project-dropdown-toggle{} /*Path select toggle*/
+#sidebar #project-files-header #project-dropdown-toggle #project-title{} /*Currently selected project title*/
+#sidebar #project-files-header #project-dropdown-toggle .dropdown-arrow{} /*Select toggle arrow - SVG image*/
+#sidebar #project-files-header #closeAllFolders{} /*Close all icon*/
+#sidebar #project-files-header #search-files-button{} /*Search file icon*/
+
+
+/*Project files container*/
+/*Project files - WITHOUT header*/
+#sidebar #project-files-container{
+  background-color: #232830;
+  color: #65737f;
+}
+
+ /*Closed tree element*/
+#sidebar #project-files-container li.jstree-closed a{
+  color: #b5b5b5;
+}
+
+/*Open tree element*/
+#sidebar #project-files-container li.jstree-open > a {
+  color: #b5b5b5;
+}
+
+ /*Project container file*/
+#sidebar #project-files-container ul li a{
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 500;
+  color: #65737f;
+}
+
+ /*Project container file's extension*/
+#sidebar #project-files-container ul li a span.extension{
+  color: #65737f;
+}
+
+/*Project container file hovered*/
+#sidebar #project-files-container ul li a.jstree-hovered{
+  background-color: #2b313b;
+}
+
+/*Project container file selected */
+#sidebar #project-files-container .sidebar-selection{
+  background:#2b313b;
+  border:none;
+}
+
+/*Selected project file's right triangle ([] block)*/
+#sidebar #project-files-container .sidebar-selection-triangle {
+  background-color: #2b313b;
+  border-bottom: none;
+}
+
+/*Selected project file's right triangle (> block)*/
+#sidebar #project-files-container .sidebar-selection-triangle.triangle-visible:before {
+  border-left: 12px solid #232830;
+}
+
+/*Global rules apply to inline editor scroll, just use .inline-widget class to target only bar options of this area. Example below.*/
+
+.cm-s-The-Insomniac.CodeMirror {
+  background-color: #2b313b;
+  color: #65737f;
+  font-family: "Source Code Pro", "Inconsolata", "Menlo", "Consolas", "Lucida Grande", monospace;
+  font-size: 17px;
+  line-height: 1.3em;
+  font-weight: 500;
+}
+
+/*Inline editor "gutter", won't affect line count in inline editor*/
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-gutters{
+  background-color: #2b313b;
+  border-right: 1px solid #484F5A;
+/* Without plugins it looks better with padding but once git and hinting is enabled this gets LARGE */
+/*  padding-left: 8px; */
+  padding-right: 8px;
+}
+
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-linenumbers {
+  background-color: #2b313b;
+}
+
+/*Inline editor line numbers bar - no "gutter"*/
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-linenumber{
+/*  color: #65737f;*/
+}
+
+/*padding between line number & content*/
+.cm-s-The-Insomniac.CodeMirror pre{
+	padding: 0 8px;
+}
+
+/*Highlight active editor line*/
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-activeline {
+   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* remove outline for active editor line */
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-activeline-background {
+  outline: none;
+}
+
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt{
+  color: #ffffff;
+}
+
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0;
+}
+
+.CodeMirror-selected {
+    background: #343D46;
+}
+
+.cm-s-The-Insomniac.CodeMirror .cm-keyword {color: #B48EAD;}
+.cm-s-The-Insomniac.CodeMirror .cm-atom {color: #acc697;}
+.cm-s-The-Insomniac.CodeMirror .cm-number {color: #de935f;}
+.cm-s-The-Insomniac.CodeMirror .cm-def {color: #c5c8c6;}
+.cm-s-The-Insomniac.CodeMirror .cm-variable {color: #c5c8c6;}
+.cm-s-The-Insomniac.CodeMirror .cm-variable-2 {color: #8abeb7;}
+.cm-s-The-Insomniac.CodeMirror .cm-property {color: #c5c8c6;}
+.cm-s-The-Insomniac.CodeMirror .cm-operator {color: #ce4b8b;}
+.cm-s-The-Insomniac.CodeMirror .cm-comment {color: #65737f;}
+.cm-s-The-Insomniac.CodeMirror .cm-string{color: #acc697;}
+.cm-s-The-Insomniac.CodeMirror .cm-string-2{color: #acc697;}
+.cm-s-The-Insomniac.CodeMirror .cm-meta {color: #c5c8c6;}
+.cm-s-The-Insomniac.CodeMirror .cm-qualifier {color: #de935f;}
+.cm-s-The-Insomniac.CodeMirror .cm-bracket {color: #f9faf4;}
+.cm-s-The-Insomniac.CodeMirror .cm-tag {color: #cc6666;}
+.cm-s-The-Insomniac.CodeMirror .cm-attribute {color: #de935f;}
+
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-matchingbracket {
+  color: #a7ec21;
+  font-weight: bold;
+  outline: 1px solid #484F5A;
+}
+
+.cm-s-The-Insomniac.CodeMirror .cm-tag.CodeMirror-matchingtag {
+  outline: 1px solid #484F5A;
+}
+
+.cm-s-The-Insomniac.CodeMirror .CodeMirror-searching {
+  background-color: #acc697;
+  color: #2b313b;
+}
+
+/* Interactive linting extension override */
+.cm-s-The-Insomniac.CodeMirror *[class*="interactive-linter-w"] {
+  border-bottom: 2px dotted #3D8A87;
+}
+
+/*Status bar - bottom*/
+#status-bar{background-color: #232830;} /*Bottom status bar*/
+#status-bar #status-info{color: #65737f;} /*Line & column info*/
+#status-bar #status-file{color: #b5b5b5;} /* File lines info */
+#status-bar #status-indicators{background-color: #232830;} /*Second part of the status bar*/
+#status-bar #status-indicators{} #status-indent{color: #65737f;} /*Indent status info*/
+#status-bar #status-indicators{} #status-overwrite{color: #65737f;} /*Insert/Overwrite status info*/
+#status-bar #status-indicators{} #status-language{color: #65737f;} /*Language info*/
+#status-bar #status-indicators{} #fileSizeInfo{color: #65737f;} /*File size*/
+#status-bar #status-indicators{} #filePathInfo{color: #65737f;} /*File path*/
